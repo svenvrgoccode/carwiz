@@ -184,6 +184,11 @@ form{
             display: flex;
         }
     }
+    .select-text.active{
+        z-index: 200;
+        width:  calc(63.6rem + 1rem + 2.6rem);
+        border-bottom: 0;
+    }
     .input-wrap{
         display: flex;
         align-items: flex-end;
@@ -335,8 +340,14 @@ form{
 
         }
     }
+    .select1{
+        display: none;
+    }
     .select2{
         display: none;
+    }
+    .select.active{
+        display: block;
     }
 
 }

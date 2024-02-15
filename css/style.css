@@ -120,6 +120,7 @@ header{
 
 .hero-index{
     .text{
+        margin-top: 10rem;
         margin-bottom: 4rem;
         display: flex;
         flex-direction: column;
@@ -148,7 +149,7 @@ form{
     border-radius: 2rem;
     .angle{
         width: 1.6rem;
-        color: black;
+        color: var(--achrom1);
     }
     .first-row{
         display: flex;
@@ -261,7 +262,7 @@ form{
         position: absolute;
         z-index: 2;
         top: 0;
-        background: white;
+        background: var(--achrom2);
         width:  calc(63.6rem + 1rem + 2.6rem);
         ul{
             position: relative;

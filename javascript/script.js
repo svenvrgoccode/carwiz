@@ -73,3 +73,26 @@ document.addEventListener('click',(e)=> {
         clearContact()
     }
 })
+
+
+const date1 = document.querySelector('#datepicker1') 
+const date2 = document.querySelector('#datepicker2') 
+
+let currentDate = new Date();
+let formattedDate = (parseInt(currentDate.toISOString().slice(5,7), 10)) + '/' + (parseInt(currentDate.toISOString().slice(8,10), 10)) + '/' + currentDate.toISOString().slice(0,4);
+
+date1.value = formattedDate;
+
+let threeDaysAhead = new Date(currentDate);
+threeDaysAhead.setDate(currentDate.getDate() + 3);
+
+let formattedThreeDaysAhead = (parseInt(threeDaysAhead.toISOString().slice(5, 7), 10)) + '/' + (parseInt(threeDaysAhead.toISOString().slice(8, 10), 10)) + '/' + threeDaysAhead.toISOString().slice(0, 4);
+
+date2.value = formattedThreeDaysAhead;
+
+date1.addEventListener("keydown", function(event) {
+    event.preventDefault();
+});
+date2.addEventListener("keydown", function(event) {
+    event.preventDefault();
+});

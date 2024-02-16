@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/datepicker.js/datepicker.css">
+    
     <title>Carwiz</title>
 </head>
 <body>
@@ -614,7 +616,7 @@
                             </label>
                             <div class="input-wrap">
                                 <div class="input-wrap-2">
-                                    <input type="text" name="vrijeme-preuzimanja"  value="2024.02.15.">
+                                    <input id="datepicker1" type="text"  name="vrijeme-preuzimanja"  >
                                     <svg class="angle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                       </svg>
@@ -683,7 +685,7 @@
                             </label>
                             <div class="input-wrap">
                                 <div class="input-wrap-2">
-                                    <input type="text" name="vrijeme-vraćanja" value="2024.02.15.">
+                                    <input id="datepicker2" type="text" name="vrijeme-vraćanja" >
                                     <svg class="angle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                       </svg>
@@ -756,6 +758,17 @@
     </div>
 </div>
 </section>
+<script src="node_modules/datepicker.js/datepicker.js"></script>
+
+<script>
+    const datepicker1 = new Datepicker(document.getElementById('datepicker1'), {
+        format: 'yyyy-mm-dd',
+
+    });
+    const datepicker2 = new Datepicker(document.getElementById('datepicker2'), {
+        format: 'yyyy-mm-dd',
+    });
+</script>
 <script src="javascript/script.js"></script>
 </body>
 </html>
